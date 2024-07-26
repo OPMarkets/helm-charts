@@ -1,0 +1,6 @@
+*.lock
+*/*/chart.*
+
+*/*/charts
+*-test-manifests.yaml
+*-config.txt

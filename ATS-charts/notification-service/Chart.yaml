@@ -1,0 +1,15 @@
+apiVersion: v2
+description: The notification microservice helm chart for notification-service
+keywords:
+  - notification-service
+maintainers:
+- email: mukul@vibhathi.com
+  name: Mukul Jariyal
+name: notification-service
+appVersion: "0.1.0"
+version: 0.1.0
+dependencies:
+  - name: OPM-platform
+    repository: file://../../OPM-Platform
+    version: 0.1.0
+    alias: notification-service

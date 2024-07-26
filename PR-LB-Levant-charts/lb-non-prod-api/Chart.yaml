@@ -1,0 +1,15 @@
+apiVersion: v2
+description: The orders microservice helm chart lb non-prod
+keywords:
+  - non-prod-lb-api
+maintainers:
+- email: mukul@vibhathi.com
+  name: Mukul Jariyal
+name: non-prod-lb-api
+appVersion: "0.1.0"
+version: 0.1.0
+dependencies:
+  - name: OPM-platform
+    repository: file://../../OPM-Platform
+    version: 0.1.0
+    alias: non-prod-lb-api

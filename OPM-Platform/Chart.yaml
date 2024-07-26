@@ -1,0 +1,9 @@
+apiVersion: v2
+description: A Common Helm Chart for OPM Platform Applications
+keywords:
+- OPM-platform
+maintainers:
+- email: mukul@vibhathi.com
+  name: Mukul Jariyal
+name: OPM-platform
+version: 0.1.0

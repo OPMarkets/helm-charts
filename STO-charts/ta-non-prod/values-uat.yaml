@@ -1,0 +1,32 @@
+# Global Values
+global:
+  chartName: dev-sto-api
+# Charts Name
+dev-sto-api:
+  # Deployment
+  Deployment:
+    enabled: true
+    name: sto-backend-api
+    replicas: 1
+    imageRepository: us-east4-docker.pkg.dev/oasisprotokenization-nonprod/non-prod-sto-api/non-prod-sto-api
+    imageTag: 0.1.0-45f336d
+    configMap: sto-backend-api
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: "25%"
+        maxUnavailable: "25%"
+        # Health Check
+    healthCheck:
+      enabled: true
+      path: /api/v1/healthCheck
+      port: 9000
+      # Expose Deployment Details
+    expose:
+      enabled: true
+      ports:
+        - port: 9000
+  service:
+    enabled: true
+  hpa:
+    enabled: true
